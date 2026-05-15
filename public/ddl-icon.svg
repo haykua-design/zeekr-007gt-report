@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 极简几何风格：纯色块 DDL 构型 -->
+  <rect width="64" height="64" rx="16" fill="#18181B"/>
+  
+  <!-- 抽象 DDL 线条：极简、现代、高级 -->
+  <path d="M18 20V44H30C36.6274 44 42 38.6274 42 32C42 25.3726 36.6274 20 30 20H18Z" 
+        stroke="white" 
+        stroke-width="4" 
+        stroke-linejoin="round"/>
+        
+  <path d="M26 28V36H30C32.2091 36 34 34.2091 34 32C34 29.7909 32.2091 28 30 28H26Z" 
+        fill="white"/>
+        
+  <path d="M46 20V44H52" 
+        stroke="white" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+</svg>

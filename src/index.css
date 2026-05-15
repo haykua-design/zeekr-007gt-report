@@ -1,0 +1,51 @@
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/jetbrains-mono/latin-500.css";
+@import "@fontsource/jetbrains-mono/latin-700.css";
+
+/* Global stylesheet — Tailwind directives, universal resets, body font baseline.
+ *
+ * Page-level color (canvas + foreground) is set on the layout root in
+ * `src/App.tsx` (`bg-background text-foreground` on the outer <div>). That
+ * keeps the canvas inside React where it's easy to override per route.
+ *
+ * Body font-family IS applied here, because some UI libraries (Radix
+ * dropdowns, dialogs, tooltips) portal overlays directly into <body>,
+ * outside React's render tree. Setting `font-body` on `body` makes
+ * those overlays inherit the project's typeface. Override per-element
+ * with `font-display` / `font-mono` Tailwind classes as usual.
+ *
+ * What belongs here:
+ *  - The three @tailwind directives (required for utilities to compile).
+ *  - Universal resets that need to apply outside React's render tree.
+ *  - Body-level font baseline (for body-portaled overlays).
+ *
+ * What does NOT belong here:
+ *  - Color / background on `body` or `html` — set on the App.tsx layout root.
+ *  - Page-specific styling — co-locate in the page or component.
+ *  - Tokens / theme values — those live in `src/theme/design-tokens.mjs`.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-body;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}

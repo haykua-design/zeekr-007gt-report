@@ -1,0 +1,9 @@
+{
+  // 使用 Project References 方式组织配置
+  // 主配置不直接包含文件，而是引用子项目配置
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

@@ -1,0 +1,10 @@
+# Assets Directory
+
+This directory is for storing downloaded files such as:
+- Crawled web pages (HTML files)
+- Downloaded images
+- PDF documents
+- Other static assets that need to be accessed via HTTP
+
+Files in this directory can be accessed via `/assets/filename` in your application.
+
